@@ -1,5 +1,44 @@
 # sumcoin-seeder
 
+# The seeder has been tested using Ubuntu v16.04
+
+## If using Ubuntu v18.04 
+
+* The DNS responder on the machine needs a config updated.
+
+How..
+```
+cd /etc/systemd/resolved.conf 
+```
+It should look like the following:
+```
+#  This file is part of systemd.
+# 
+#  systemd is free software; you can redistribute it and/or modify it
+#  under the terms of the GNU Lesser General Public License as published by
+#  the Free Software Foundation; either version 2.1 of the License, or
+#  (at your option) any later version.
+#
+# Entries in this file show the compile time defaults.
+# You can change settings by editing this file.
+# Defaults can be restored by simply deleting this file.
+#
+# See resolved.conf(5) for details
+
+[Resolve]
+#DNS=
+#FallbackDNS=
+#Domains=
+#LLMNR=no
+#MulticastDNS=no
+#DNSSEC=no
+#Cache=yes
+DNSStubListener=no
+```
+## If using Ubuntu 16.04, proceed as shown, no adjustments are needed.
+## If Using Ubuntu 18.04, proceed as shown after conducting steps above.
+
+# What is Sumcoin Seeder?
 
 ## Sumcoin-seeder is a crawler for the Sumcoin network, which exposes a list of reliable nodes via a built-in DNS server.
 
