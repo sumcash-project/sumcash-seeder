@@ -118,6 +118,11 @@ make
 
 * It should compile pretty quickly.
 
+## Setup dnsseed & vps records 
+Create
+CNAME	vps.yourdomain.com as an alias of domain.com
+NS - dnsseed.yourdomain.com that points to vps.yourdomain.com
+
 ## Create TMUX Session
 
 When it's done, start a tmux session called "seeder".  ** STAY in the dir "sumcoin-seeder"
