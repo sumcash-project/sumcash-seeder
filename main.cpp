@@ -400,7 +400,7 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"127.0.0.1", "dnsseed.sumcoinpool.org", "dnsseed.jandsmining.com", "dnsseed.coinstop.org", "dnsseed.sumnode.io", "dnsseed.sumcoinmining.org", "sumdnsseed.moonypool.com", "dnsseed.sumfaucet.co", "dnsseed.sumcoin.space", "dnsseed.sumcamper.com", ""};
+static const string mainnet_seeds[] = {"127.0.0.1", "dnsseed.sumcoinpool.org", "dnsseed.jandsmining.com", "dnsseed.coinstop.org", "dnsseed.sumnode.io", "dnsseed.sumcoinmining.org", "sumdnsseed.moonypool.com", "dnsseed.sumfaucet.co", "dnsseed.sumcoin.space", "dnsseed.sumcamper.com", "dnsseed.suminsight.com", ""};
 static const string testnet_seeds[] = {"127.0.0.1", ""};
 static const string *seeds = mainnet_seeds;
 
