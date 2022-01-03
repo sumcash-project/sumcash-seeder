@@ -35,7 +35,7 @@ public:
   CDnsSeedOpts() : nThreads(96), nDnsThreads(4), nPort(53), mbox(NULL), ns(NULL), host(NULL), tor(NULL), fUseTestNet(false), fWipeBan(false), fWipeIgnore(false), ipv4_proxy(NULL), ipv6_proxy(NULL) {}
 
   void ParseCommandLine(int argc, char **argv) {
-    static const char *help = "Sumcoin-seeder\n"
+    static const char *help = "Sumcash-seeder\n"
                               "Usage: %s -h <host> -n <ns> [-m <mbox>] [-t <threads>] [-p <port>]\n"
                               "\n"
                               "Options:\n"
@@ -82,17 +82,17 @@ public:
           host = optarg;
           break;
         }
-        
+
         case 'm': {
           mbox = optarg;
           break;
         }
-        
+
         case 'n': {
           ns = optarg;
           break;
         }
-        
+
         case 't': {
           int n = strtol(optarg, NULL, 10);
           if (n > 0 && n < 1000) nThreads = n;
@@ -400,13 +400,13 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"127.0.0.1", "dnsseed.sumcoinpool.org", "dnsseed.sum100.org", "dnsseed.jandsmining.com", "dnsseed.sumnode.io", "dnsseed.sumcoinmining.org", "sumdnsseed.moonypool.com", "dnsseed.sumcoin.space", "dnsseed.sumcamper.com", "dnsseed.suminsight.com", "dnsseed.sumexplorer.com", ""};
+static const string mainnet_seeds[] = {"127.0.0.1", ""};
 static const string testnet_seeds[] = {"127.0.0.1", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 3333), true);
+    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 9999), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {

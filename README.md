@@ -1,4 +1,4 @@
-# sumcoin-seeder
+# sumcash-seeder
 
 # The seeder has been tested using Ubuntu v16.04
 
@@ -38,9 +38,9 @@ DNSStubListener=no
 ## If using Ubuntu 16.04, proceed as shown, no adjustments are needed.
 ## If Using Ubuntu 18.04, proceed as shown after conducting steps above.
 
-# What is Sumcoin Seeder?
+# What is Sumcash Seeder?
 
-## Sumcoin-seeder is a crawler for the Sumcoin network, which exposes a list of reliable nodes via a built-in DNS server.
+## Sumcash-seeder is a crawler for the Sumcash network, which exposes a list of reliable nodes via a built-in DNS server.
 
 ### Features:
 
@@ -76,7 +76,7 @@ First, you'll need a droplet with a domain assigned to it. Once that is set up, 
 First, go into the digital ocean panel (or whichever service you use) for the domain. Add a new NS record, making the hostname something like "dnsseed" and directed to the IP of the droplet. Once that's done, log into the droplet as root. Download the seeder with ...
 
 ```
-git clone https://github.com/sumcoinlabs/sumcoin-seeder.git
+git clone https://github.com/sumcash-project/sumcash-seeder.git
 ```
 
 
@@ -104,13 +104,13 @@ e-mail address (with the @ part replaced by .) using -m.
 
 Go into the seeder directory and run "make". 
 ```
-cd sumcoin-seeder
+cd sumcash-seeder
 ```
 
 Compiling will require boost and ssl.  On debian systems, these are provided
 by `libboost-dev` and `libssl-dev` respectively.
 
-#### From the dir - "sumcoin-seeder" run:
+#### From the dir - "sumcash-seeder" run:
 ```
 make
 ```
@@ -125,7 +125,7 @@ NS - dnsseed.yourdomain.com that points to vps.yourdomain.com
 
 ## Create TMUX Session
 
-When it's done, start a tmux session called "seeder".  ** STAY in the dir "sumcoin-seeder"
+When it's done, start a tmux session called "seeder".  ** STAY in the dir "sumcash-seeder"
 
 ```
 tmux new -s seeder
